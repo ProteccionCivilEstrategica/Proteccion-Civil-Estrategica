@@ -14,9 +14,7 @@ body {
     font-family: "Poppins", sans-serif;
     background: linear-gradient(to bottom right, #011e3d, #ff914c);
     background-size: cover;
-    overflow-x: hidden;
-    margin: 0;
-    padding: 0;  
+    overflow-x: hidden; 
 }
 
 .container {
@@ -82,13 +80,16 @@ body {
 
 .hamburger-menu {
     position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        z-index: 1000;
+    top: 0;
+    left: 0;        
+    right: 0;
+    left: 0;
+    margin: 0 auto;
+    max-width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000;
   }
   
   .logo {
@@ -133,6 +134,7 @@ body {
     padding-left: 30px;
     padding-right: 30px;
     display: none;
+    z-index: 1001;
   }
   
   .hamburger-menu-list li {
@@ -398,6 +400,12 @@ h4 {
 
 
 @media(max-width: 990px) {
+
+    .hamburger-menu-list {
+        max-width: 90%;
+        left: 5%;
+        right: 5%;
+    }
 
 
     .header {
