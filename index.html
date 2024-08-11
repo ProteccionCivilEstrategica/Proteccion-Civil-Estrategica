@@ -12,24 +12,23 @@
     
     <header class="header">
 
-        <div class="menu container">
+        <div class="hamburger-menu">
+
             <a href="index.html" class="logo">
                 <img src="img/logo.jpg" alt="Logo" class="logo-img">
-            </a>
-        
-            <input type="checkbox" id="menu">
-        
-            <label for="menu">
-                <img src="img/menu.png" class="menu-icon" alt="">
-            </label>
-        
-            <nav class="navbar">
-                <ul>
-                    <li><a href="Capacitaciones.html">Capacitaciones</a></li>
-                    <li><a href="Asesorias.html">Asesorias</a></li>
-                    <li><a href="Simulacros.html">Simulacros</a></li>
-                </ul>
-            </nav>
+              </a>
+              
+           
+              <button class="hamburger-button">
+                <img src="img/hi.png" alt="Hamburger Icon" class="hamburger-icon">
+              </button>
+              
+            
+            <ul class="hamburger-menu-list">
+            <li><a href="Capacitaciones.html">Capacitaciones</a></li><br>
+            <li><a href="Asesorias.html">Asesorias</a></li><br>
+            <li><a href="Simulacros.html">Simulacros</a></li><br>
+            </ul>
         </div>
         
 
@@ -41,11 +40,11 @@
 
                 <h2>Protección Civil Estratégica</h2>
 
-                <h4><strong>Su aliado en Capacitación y Asesoría en Protección Civil.</strong></h4>
+                <h4>Su aliado en Capacitación y Asesoría en Protección Civil.</h4>
 
                 <p>
                     <br> Nuestro compromiso es fortalecer la seguridad y la resiliencia de comunidades y organizaciones mediante programas de capacitación y servicios de asesoría especializados.<br>
-                    <strong>Tenemos cobertura en todo el territorio Nacional.</strong>
+                    Tenemos cobertura en todo el territorio Nacional.
                 </p>
                 <a href="Capacitaciones.html" class="btn-1">Información</a>
             </div>
@@ -58,7 +57,11 @@
 
     <section class="general container">
 
-        <h2>Paquetes y Promociones</h2>
+        <div class="header-h2">
+
+            <h2>Paquetes y Promociones</h2>
+
+        </div>
         
 
         <div class="general-content">
@@ -237,5 +240,25 @@
             <p>&copy; 2024 Protección Civil Estratégica. Todos los derechos reservados.</p>
         </div>
     </footer>
+
+    <script>
+        // Seleccionamos el botón de hamburguesa y el menú desplegable
+        const hamburgerButton = document.querySelector('.hamburger-button');
+        const hamburgerMenuList = document.querySelector('.hamburger-menu-list');
+
+        // Agregamos un evento de clic al botón de hamburguesa
+        hamburgerButton.addEventListener('click', () => {
+        // Toggle el estado del botón y el menú desplegable
+        hamburgerButton.classList.toggle('active');
+        hamburgerMenuList.classList.toggle('active');
+        
+        // Mostramos el menú desplegable explícitamente
+        if (hamburgerMenuList.classList.contains('active')) {
+            hamburgerMenuList.style.display = 'block';
+        } else {
+            hamburgerMenuList.style.display = 'none';
+        }
+        });
+    </script>
 </body>
 </html>

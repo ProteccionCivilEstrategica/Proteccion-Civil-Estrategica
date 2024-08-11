@@ -12,26 +12,23 @@
 
     <header class="header">
 
-        <div class="menu container">
+        <div class="hamburger-menu">
 
             <a href="index.html" class="logo">
                 <img src="img/logo.jpg" alt="Logo" class="logo-img">
-            </a>
-
-            <input type="checkbox" id="menu">
-
-            <label for="menu">
-                <img src="img/menu.png" class="menu-icon" alt="">
-            </label>
-
-            <nav class="navbar">
-                <ul>
-                    <li><a href="index.html">Inicio</a></li>
-                    <li><a href="Capacitaciones.html">Capacitaciones</a></li>
-                    <li><a href="Simulacros.html">Simulacros</a></li>
-                </ul>
-            </nav>
-
+              </a>
+              
+           
+              <button class="hamburger-button">
+                <img src="img/hi.png" alt="Hamburger Icon" class="hamburger-icon">
+              </button>
+              
+            
+            <ul class="hamburger-menu-list">
+            <li><a href="index.html">Inicio</a></li><br>
+            <li><a href="Capacitaciones.html">Capacitaciones</a></li><br>
+            <li><a href="Simulacros.html">Simulacros</a></li><br>
+            </ul>
         </div>
 
         <div class="header-content container">
@@ -42,9 +39,9 @@
 
                 <h2>Asesorias</h2>
 
-                <p><strong>
+                <p>
                     En esta sección encontraras los tópicos en los que Protección Civil Estratégica puede asesorarte para solucionar los temas relacionados con ordenes de clausura, auditorias, ordenes de inspección, visitas programadas y demás.
-                </p></strong>
+                </p>
 
                 <a href="index.html" class="btnp-1">Inicio</a>
             </div>
@@ -346,6 +343,24 @@
     </footer>
     
     <script>
+
+        const hamburgerButton = document.querySelector('.hamburger-button');
+        const hamburgerMenuList = document.querySelector('.hamburger-menu-list');
+ 
+            hamburgerButton.addEventListener('click', () => {
+                
+            hamburgerButton.classList.toggle('active');
+            hamburgerMenuList.classList.toggle('active');
+
+            if (hamburgerMenuList.classList.contains('active')) {
+                hamburgerMenuList.style.display = 'block';
+            } else {
+                hamburgerMenuList.style.display = 'none';
+            }
+            });
+
+
+        
         document.querySelectorAll('.btn-1').forEach(button => {
             button.addEventListener('click', (event) => {
                 event.preventDefault();

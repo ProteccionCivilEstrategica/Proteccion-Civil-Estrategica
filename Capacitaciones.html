@@ -12,26 +12,23 @@
 
     <header class="header">
 
-        <div class="menu container">
+        <div class="hamburger-menu">
 
             <a href="index.html" class="logo">
                 <img src="img/logo.jpg" alt="Logo" class="logo-img">
-            </a>
-
-            <input type="checkbox" id="menu">
-
-            <label for="menu">
-                <img src="img/menu.png" class="menu-icon" alt="">
-            </label>
-
-            <nav class="navbar">
-                <ul>
-                    <li><a href="index.html">Inicio</a></li>
-                    <li><a href="Asesorias.html">Asesorias</a></li>
-                    <li><a href="Simulacros.html">Simulacros</a></li>
-                </ul>
-            </nav>
-
+              </a>
+              
+           
+              <button class="hamburger-button">
+                <img src="img/hi.png" alt="Hamburger Icon" class="hamburger-icon">
+              </button>
+              
+            
+            <ul class="hamburger-menu-list">
+            <li><a href="index.html">Inicio</a></li><br>
+            <li><a href="Asesorias.html">Asesorias</a></li><br>
+            <li><a href="Simulacros.html">Simulacros</a></li><br>
+            </ul>
         </div>
 
         <div class="header-content container">
@@ -42,10 +39,10 @@
 
                 <h2>Capacitaciones</h2>
 
-                <p><strong>
+                <p>
                     Aquí mostramos más a detalle todos nuestros cursos de capacitación y adiestramientos que tenemos para ti.<br>
                     Nuestro objetivo es proporcionarte una amplia gama de opciones formativas diseñadas para mejorar tus habilidades y conocimientos en diversas áreas.<br>Para todo tipo de necesidad nosotros tenemos el curso perfecto para ti. Explora nuestras ofertas y encuentra el programa de capacitación que mejor se adapte a tus metas y aspiraciones.
-                </p></strong>
+                </p>
                 <a href="index.html" class="btnp-1">Inicio</a>
             </div>
         </div>
@@ -1060,6 +1057,25 @@
 
 
     <script>
+
+
+
+        const hamburgerButton = document.querySelector('.hamburger-button');
+        const hamburgerMenuList = document.querySelector('.hamburger-menu-list');
+ 
+            hamburgerButton.addEventListener('click', () => {
+                
+            hamburgerButton.classList.toggle('active');
+            hamburgerMenuList.classList.toggle('active');
+
+            if (hamburgerMenuList.classList.contains('active')) {
+                hamburgerMenuList.style.display = 'block';
+            } else {
+                hamburgerMenuList.style.display = 'none';
+            }
+            });
+
+
         document.querySelectorAll('.btn-1').forEach(button => {
             button.addEventListener('click', (event) => {
                 event.preventDefault();
@@ -1068,7 +1084,6 @@
             });
         });
 
-
         document.querySelectorAll('.btn-2').forEach(button => {
             button.addEventListener('click', (event) => {
                 event.preventDefault();
@@ -1076,7 +1091,6 @@
                 flipCard.classList.remove('clicked');
             });
         });
-
 
         document.addEventListener('scroll', function() {
             var contactSection = document.querySelector('.info-1');
