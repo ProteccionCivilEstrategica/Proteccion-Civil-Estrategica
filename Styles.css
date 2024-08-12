@@ -93,12 +93,13 @@ body {
   }
   
   .logo {
+    margin-top: 15px;
     margin-right: 260px;
   }
   
   .logo-img {
-    width: 40px;
-    height: 40px;
+    width: 100px;
+    height: 70px;
   }
   
   .hamburger-button {
@@ -153,6 +154,16 @@ body {
   .hamburger-button.active .hamburger-menu-list {
     display: block;
   }
+
+  .hamburger-menu-list {
+    display: none;
+    /* other styles */
+}
+
+.hamburger-menu-list.active {
+    display: block;
+    /* any other styles needed when visible */
+}
 
 
 .general {
@@ -406,6 +417,17 @@ h4 {
         left: 5%;
         right: 5%;
     }
+
+
+    .logo {
+        margin-top: 15px;
+        margin-right: 260px;
+      }
+      
+      .logo-img {
+        width: 80px;
+        height: 50px;
+      }
 
 
     .header {
