@@ -1075,22 +1075,24 @@
             }
             });
 
-
-        document.querySelectorAll('.btn-1').forEach(button => {
-            button.addEventListener('click', (event) => {
-                event.preventDefault();
-                const flipCard = button.closest('.flip-card');
-                flipCard.classList.add('clicked');
+            
+            document.querySelectorAll('.flip-card-btn').forEach(button => {
+                button.addEventListener('click', (event) => {
+                    event.preventDefault();
+                    const flipCard = button.closest('.flip-card-inner');
+                    flipCard.classList.add('clicked');
+                });
             });
-        });
 
-        document.querySelectorAll('.btn-2').forEach(button => {
-            button.addEventListener('click', (event) => {
-                event.preventDefault();
-                const flipCard = button.closest('.flip-card');
-                flipCard.classList.remove('clicked');
+            
+            document.querySelectorAll('.flip-card-btn-1').forEach(button => {
+                button.addEventListener('click', (event) => {
+                    event.preventDefault();
+                    const flipCard = button.closest('.flip-card-inner');
+                    flipCard.classList.remove('clicked');
+                });
             });
-        });
+
 
         document.addEventListener('scroll', function() {
             var contactSection = document.querySelector('.info-1');
