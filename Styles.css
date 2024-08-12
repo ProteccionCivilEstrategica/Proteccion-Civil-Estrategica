@@ -402,7 +402,7 @@ h4 {
 @media(max-width: 990px) {
 
     .hamburger-menu-list {
-        max-width: 90%;
+        max-width: 100%;
         left: 5%;
         right: 5%;
     }

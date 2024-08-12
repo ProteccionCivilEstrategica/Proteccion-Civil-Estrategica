@@ -33,6 +33,7 @@ body {
 
 
 .hamburger-menu {
+    background-color: #00000000;
     position: absolute;
     top: 0;
     left: 0;        
@@ -857,7 +858,7 @@ h2 {
     
 
     .hamburger-menu-list {
-        max-width: 90%;
+        max-width: 100%;
         left: 5%;
         right: 5%;
     }

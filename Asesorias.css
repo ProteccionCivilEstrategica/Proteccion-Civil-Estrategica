@@ -577,7 +577,7 @@
     @media(max-width: 991px) {
 
         .hamburger-menu-list {
-            max-width: 90%;
+            max-width: 100%;
             left: 5%;
             right: 5%;
         }
