@@ -412,6 +412,10 @@ h4 {
 
 @media(max-width: 990px) {
 
+    body {
+        overflow-x: hidden;
+    }
+
     .hamburger-menu-list {
         max-width: 100%;
         left: 5%;

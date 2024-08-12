@@ -62,7 +62,7 @@
     width: 100px;
     height: 70px;
   }
-  
+
   .hamburger-button {
     background-color: #00000000;
     color: #ff914c;
@@ -502,6 +502,10 @@
     
     
     @media(max-width: 990px) {
+
+        body {
+            overflow-x: hidden;
+        }
 
         .hamburger-menu-list {
             max-width: 100%;

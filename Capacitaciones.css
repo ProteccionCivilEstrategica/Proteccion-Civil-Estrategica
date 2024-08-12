@@ -857,7 +857,12 @@ h2 {
 
 
 
+
 @media(max-width: 990px) {
+
+    body {
+        overflow-x: hidden;
+    }
     
 
     .hamburger-menu-list {
